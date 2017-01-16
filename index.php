@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','267540431:AAG2pmTARoM-3tsmBDQsdwVc0wuYV0RVKMQ');
+define('API_KEY','267540431:AAGCAC6lI59kzOlA3ucKRwnexwe6G4n621U');
 $the_admin_id = 0;
 
 file_put_contents("count",file_get_contents("count")+1);
@@ -1296,7 +1296,7 @@ https://telegram.me/sscapachebot
                         ]);
                         $t = time().'.jpg';
                         $furl = 'http://go.nicesource.ir/images/'.$t;
-                        $fule = 'https://api.telegram.org/file/bot267540431:AAG2pmTARoM-3tsmBDQsdwVc0wuYV0RVKMQ/'.trim($imag->result->file_path,"\\/");
+                        $fule = 'https://api.telegram.org/file/bot267540431:AAGCAC6lI59kzOlA3ucKRwnexwe6G4n621U/'.trim($imag->result->file_path,"\\/");
                         $file_ext = end(explode(".",$fule));
                         if($file_ext == "jpg" || $file_ext == "jpeg") {
                             file_put_contents("/var/www/html/images/".$t, fopen($fule, 'r'));
