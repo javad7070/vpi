@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','296897621:AAEuOX1WfqRPSYwk8WqtxlR7to1HLDC2Jqg');
+define('API_KEY','267540431:AAE0tklInbn6iMyRgNjRICwrmNq0iiwQSaw');
 $the_admin_id = 0;
 
 file_put_contents("count",file_get_contents("count")+1);
@@ -204,7 +204,7 @@ echo 'QUERY ...';
                         'id'=>base64_encode(rand(5,555)),
                         'title'=>'برای ارسال کد کلیک کنید',
                         'input_message_content'=>[
-                            'message_text'=>'@sscapachebot getlist-'.$theListId
+                            'message_text'=>'@alfa_glass_Bot getlist-'.$theListId
                         ]
                     ]])
             ]));
@@ -410,7 +410,7 @@ https://telegram.me/mhrdev/834
 
 پس از اتمام کار ربات به شما یک کد مانند کد زیر می دهد .👇👇
 
-<pre>@creat_butglass_bot d6cdbea45b238632bdd6d11dcf7fe98f </pre>
+<pre>@alfa_glass_Bot d6cdbea45b238632bdd6d11dcf7fe98f </pre>
 
 این کد را کپی کند و هر وقت خواستید بنر را نمایش دهید ( یا در تبادل ها به ادمین کانال دیگر بدهید ) از این کد استفاده کنید .
 
@@ -496,7 +496,7 @@ https://telegram.me/joinchat/linke_dovom
 این توکن را  ‌ذخیره کنید . سپس ربات را ادمین کانالتان کنید ( رباتی که خودتان ساختید )
 
 کد های اینلاین مانند :
-<code>@creat_butglass_bot getlist-XXXXX </code>
+<code>@alfa_glass_Bot getlist-XXXXX </code>
 
 👈  حالا برای من کد inline تان را بفرستید : ( فعلا فقط لیست ها قبول هستند )".$cancel_Text,
                         'parse_mode'=>"HTML",
@@ -507,8 +507,8 @@ https://telegram.me/joinchat/linke_dovom
 
                 case '2':{
                     $code = $update->message->text;
-                    if(str_replace('@sscapachebot getlist-','',$code) != $code){
-                        $code_list = trim(str_replace('@sscapachebot getlist-','',$code));
+                    if(str_replace('@alfa_glass_Bot getlist-','',$code) != $code){
+                        $code_list = trim(str_replace('@alfa_glass_Bot getlist-','',$code));
                         $DB = getMakeDB($code_list,false);
                         if(isset($DB->done)){
                             makeHTTPRequest('sendMessage',[
@@ -541,7 +541,7 @@ https://telegram.me/joinchat/linke_dovom
                             'text'=>"❗️ کد شما غیر قابل قبول است .
 
 کد شما باید به شکل زیر باشد :
-<code>@creat_butglass_bot getlist-XXXXX </code>
+<code>@alfa_glass_Bot getlist-XXXXX </code>
 
 توجه فرمایید فقط کد های List ها قبول هستند .".$cancel_Text,
                             'parse_mode'=>'HTML'
@@ -782,7 +782,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                             ]);
 
-                            $theCommand = '@creat_butglass_bot getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
+                            $theCommand = '@alfa_glass_Bot getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
                             makeHTTPRequest('sendMessage',[
                                 'chat_id'=>$update->message->from->id,
                                 'text'=>$theCommand,
@@ -990,7 +990,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                     ]);
 
-                    $theCommand = '@creat_butglass_bot getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
+                    $theCommand = '@alfa_glass_Bot getlist-'.ListTab::getCurrentMakeID($update->message->from->id);
                     makeHTTPRequest('sendMessage',[
                         'chat_id'=>$update->message->from->id,
                         'text'=>$theCommand,
@@ -1186,7 +1186,7 @@ https://telegram.me/sscapachebot
 اگر بد توضیح دادم روی /help کلیک کن راهنمایی مفصل داره !'
                     ]);
 
-                    $theCommand = '@creat_butglass_bot getbanner-'.getCurrentMakeID($update->message->from->id);
+                    $theCommand = '@alfa_glass_Bot getbanner-'.getCurrentMakeID($update->message->from->id);
                     makeHTTPRequest('sendMessage',[
                         'chat_id'=>$update->message->from->id,
                         'text'=>$theCommand,
@@ -1264,7 +1264,7 @@ https://telegram.me/sscapachebot
 //                        'chat_id'=>$userID
 //                    ]);
 //                    makeHTTPRequest('sendMessage',[
-//                        'text'=>'@sscapachebot getbanner-'.getCurrentMakeID($userID),
+//                        'text'=>'@alfa_glass_Bot getbanner-'.getCurrentMakeID($userID),
 //                        'chat_id'=>$userID
 //                    ]);
 //                }break;
@@ -1368,7 +1368,7 @@ https://telegram.me/sscapachebot
                         'chat_id'=>$userID
                     ]);
                     makeHTTPRequest('sendMessage',[
-                        'text'=>'@creat_butglass_bot getbanner-'.getCurrentMakeID($userID),
+                        'text'=>'@alfa_glass_Bot getbanner-'.getCurrentMakeID($userID),
                         'chat_id'=>$userID
                     ]);
                 }break;
